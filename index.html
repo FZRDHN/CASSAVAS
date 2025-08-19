@@ -45,22 +45,24 @@
 
 <body class="bg-gray-50">
     <!-- Navigation -->
-    <nav class="bg-amber-800 text-white shadow-lg sticky top-0 z-50">
+    <nav class="bg-[#BCA88D] text-[#3E3F29] shadow-lg sticky top-0 z-50">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-2">
-                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/14476787-703d-4d1d-87c2-0fe3d0db7208.png"
-                    alt="Cassava Stick logo - circular logo with stylized cassava illustration"
+                <img src="img/icon.png" alt="Cassava Stick logo - circular logo with stylized cassava illustration"
                     class="h-10 w-10 rounded-full">
                 <span class="font-bold text-xl">Cassava'S tick</span>
             </div>
-            <div class="hidden md:flex space-x-8">
+            <!-- Menu Utama (disembunyikan di mode ponsel) -->
+            <div id="mobile-menu"
+                class="hidden md:flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8 absolute md:static top-16 left-0 w-full md:w-auto bg-amber-800 md:bg-transparent p-4 md:p-0">
                 <a href="#home" class="hover:text-amber-200 transition">Home</a>
                 <a href="#products" class="hover:text-amber-200 transition">Produk</a>
                 <a href="#about" class="hover:text-amber-200 transition">Tentang Kami</a>
                 <a href="#testimonials" class="hover:text-amber-200 transition">Testimoni</a>
                 <a href="#contact" class="hover:text-amber-200 transition">Kontak</a>
             </div>
-            <button class="md:hidden focus:outline-none">
+
+            <button id="menu-btn" class="md:hidden focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
                     </path>
@@ -69,6 +71,15 @@
         </div>
     </nav>
 
+    <script>
+        // Toggle mobile menu
+        const btn = document.getElementById("menu-btn");
+        const menu = document.getElementById("mobile-menu");
+
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+    </script>
     <!-- Hero Section -->
     <section id="home" class="hero-bg text-white py-20 md:py-32">
         <div class="container mx-auto px-4 text-center">
@@ -87,7 +98,7 @@
     </section>
 
     <!-- Features -->
-    <section class="py-16 bg-white">
+    <section class="py-16 bg-[#F1F0E4]">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                 <div class="p-6">
@@ -127,7 +138,7 @@
     </section>
 
     <!-- Products -->
-    <section id="products" class="py-16 bg-amber-50">
+    <section id="products" class="py-16 bg-[#BCA88D]">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12">Produk Kami</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -190,7 +201,7 @@
     </section>
 
     <!-- About Us -->
-    <section id="about" class="py-16 bg-white">
+    <section id="about" class="py-16 bg-[#F1F0E4]">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
@@ -223,7 +234,7 @@
     </section>
 
     <!-- Testimonials -->
-    <section id="testimonials" class="py-16 bg-amber-800 text-white">
+    <section id="testimonials" class="py-16 bg-[#7D8D86] text-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12">Apa Kata Pelanggan?</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -399,11 +410,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="mt-8">
+                        <!-- <div class="mt-8"> 
                             <h3 class="text-xl font-bold mb-4">Jam Operasional</h3>
                             <p class="mb-2"><span class="font-semibold">Senin-Jumat:</span> 08.00 - 17.00 WITA</p>
                             <p><span class="font-semibold">Sabtu-Minggu:</span> 09.00 - 19.00 WITA</p>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
                 <div class="md:w-1/2">
@@ -429,7 +440,7 @@
                                 class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
                         </div>
                         <button type="submit"
-                            class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-6 rounded-full transition">Kirim
+                            class="bg-[#7D8D86] hover:bg-amber-700 text-white font-bold py-2 px-6 rounded-full transition">Kirim
                             Pesan</button>
                     </form>
                 </div>
@@ -451,12 +462,12 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-amber-900 text-white py-8">
+    <footer class="bg-[#3E3F29] text-white py-8">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-6 md:mb-0">
                     <div class="flex items-center space-x-2">
-                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8542e464-2397-4984-81c2-40596bb64c2c.png"
+                        <img src="img/icon.png"
                             alt="Cassava Stick logo - circular logo with stylized cassava illustration"
                             class="h-10 w-10 rounded-full">
                         <span class="font-bold text-xl">Cassava'S tick</span>
@@ -511,22 +522,7 @@
             </svg>
         </a>
     </div>
-
-    <script>
-        // Simple animation for product cards
-        document.querySelectorAll('.product-card').forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                card.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
-            });
-
-            card.addEventListener('mouseleave', () => {
-                card.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
-            });
-        });
-
-        // Mobile menu toggle would be implemented here
-        // Form submission handling would be here
-    </script>
+    </s>
 </body>
 
 </html>
